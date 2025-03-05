@@ -20,10 +20,10 @@ contract EnglishAuction {
     event Withdraw(address indexed bidder, uint256 amount);
     event End(address winner, uint256 amount);
 
-    IERC721 public nft;
-    uint256 public nftId;
+    IERC721 public immutable nft;
+    uint256 public immutable nftId;
 
-    address payable public seller;
+    address payable public immutable seller;
     uint256 public endAt;
     bool public started;
     bool public ended;

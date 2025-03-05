@@ -102,7 +102,7 @@ contract CrowdFund {
         require(!campaign.claimed, "claimed");
 
         campaign.claimed = true;
-        token.transfer(campaign.creator, campaign.pledged);
+        token.transfer(msg.sender, campaign.pledged);
 
         emit Claim(_id);
     }

@@ -31,7 +31,7 @@ contract DutchAuction {
         startingPrice = _startingPrice;
         startAt = block.timestamp;
         expiresAt = block.timestamp + DURATION;
-        discountRate = _discountRate;
+        discountRate = _discountRate; // 1 means price decreases by 1 per sec.
 
         require(_startingPrice >= _discountRate * DURATION, "starting price < min");
 
